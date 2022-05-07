@@ -10,11 +10,11 @@
 
 **** Some Informations About App 
 
-** App Developed by (Reactjs Hooks , Sass , Bootstrap , etc..)
-1- You can create new ticket 
-2- You can update your ticket 
-3- I store tickets in localStorage 
-4- List of Tickets show 2 tickets if it more than 2 will show button (Show More) when click it will apper another 2 tickets and again 
+* App Developed by (Reactjs Hooks , Sass , Bootstrap , etc..)
+* You can create new ticket 
+* You can update your ticket 
+* I store tickets in localStorage 
+* List of Tickets show 2 tickets if it more than 2 will show button (Show More) when click it will apper another 2 tickets and again 
 
 **** I send some questions to mail but you don't answer me, if you need add or edit on task you can send me. 
 
