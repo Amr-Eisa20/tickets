@@ -12,7 +12,7 @@
 
 * App Developed by (Reactjs Hooks , Sass , Bootstrap , etc..)
 * You can create new ticket 
-* You can update your ticket 
+* You can update your ticket(when click on update button  ticket data set on form again and window scroll to form to can user seen data in form )
 * I store tickets in localStorage 
 * List of Tickets show 2 tickets if it more than 2 will show button (Show More) when click it will apper another 2 tickets and again 
 
