@@ -1,0 +1,41 @@
+@import '../../Style/globel.scss';
+
+.tickets_list{
+    width: 80%;
+    margin: 40px auto;
+    .tickets_list_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: 20px;
+        color: $text_cl;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+    }
+    .tickets_list_items{
+        padding: 0;
+        li{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            span{
+                font-size: 17px;
+                width: 120px;
+                word-break: break-all;
+            }
+        }
+        
+    }
+    button{
+        @include button_style ;
+    }
+    .show_more{
+        margin: auto;
+        display: block;
+        margin-top: 40px;
+    }
+}

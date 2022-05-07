@@ -1,0 +1,20 @@
+@import "../../Style/globel.scss";
+
+.ticket_form {
+  width: 80%;
+  margin: 40px auto;
+  h2 {
+    font-size: 17px;
+  }
+  .form {
+    background-color: $main_bg_cl;
+    padding: 33px;
+    border-radius: 4px;
+    input , textarea , select{
+        box-shadow: none;
+    }
+    button{
+        @include button_style ;
+    }
+  }
+}

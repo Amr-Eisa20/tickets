@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+// Import Components
+import TicketForm from "./Components/TicketForm/TicketForm";
+import TicketsList from "./Components/TicketsList/TicketsList";
 
-function App() {
+const App = () => {
+  const initialState = JSON.parse(localStorage.getItem("tickets")) || [];
+  const [inputSub, setInputSub] = useState("");
+  const [inputPriority, setInputPriority] = useState("");
+  const [inputStatus, setInputStatus] = useState("");
+  const [inputDisc, setInputDisc] = useState("");
+  const [tickets, setTickets] = useState(initialState);
+  const [editTickets, setEditTickets] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem("tickets", JSON.stringify(tickets));
+  }, [tickets]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TicketForm
+        inputSub={inputSub}
+        inputPriority={inputPriority}
+        inputStatus={inputStatus}
+        inputDisc={inputDisc}
+        setInputSub={setInputSub}
+        setInputPriority={setInputPriority}
+        setInputStatus={setInputStatus}
+        setInputDisc={setInputDisc}
+        tickets={tickets}
+        setTickets={setTickets}
+        editTickets={editTickets}
+        setEditTickets={setEditTickets}
+      />
+      <TicketsList
+        setInputSub={setInputSub}
+        setInputPriority={setInputPriority}
+        setInputStatus={setInputStatus}
+        setInputDisc={setInputDisc}
+        tickets={tickets}
+        setEditTickets={setEditTickets}
+      />
+    </>
   );
-}
+};
 
 export default App;

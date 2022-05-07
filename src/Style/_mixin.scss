@@ -1,0 +1,15 @@
+@mixin button_style {
+  background-color: $btn_bg_cl;
+  color: $btn_text_cl;
+  padding: 5px 30px;
+  margin-top: 20px;
+  transition: 0.5s;
+  box-shadow: none;
+  &:active , &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    background-color: $hover_bg_cl;
+    border-color: $hover_bg_cl;
+  }
+}
